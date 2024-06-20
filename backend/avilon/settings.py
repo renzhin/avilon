@@ -103,11 +103,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'avilon.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "avilon", "templates"),
+            os.path.join(BASE_DIR, "templates"),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -198,7 +199,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'collected_static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -239,7 +241,7 @@ TEXT_INLINE_EDITING = True
 # https://docs.djangoproject.com/en/4.2/ref/settings/#staticfiles-dirs
 
 STATICFILES_DIRS = [
-    BASE_DIR / "avilon" / "static",
+    BASE_DIR / 'static_dev',
 ]
 
 INTERNAL_IPS = [
@@ -249,5 +251,5 @@ INTERNAL_IPS = [
 # Add project-wide static files directory
 # https://docs.djangoproject.com/en/4.2/ref/settings/#media-root
 
-MEDIA_URL = "media/"
-MEDIA_ROOT = str(BASE_DIR.parent / "media")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.parent / 'media')
