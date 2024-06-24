@@ -252,7 +252,8 @@ INTERNAL_IPS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#media-root
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = str(BASE_DIR.parent / 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_ROOT = str(BASE_DIR.parent / 'media')
 
 # Настройки для решения проблемы с CSRF на боевом сервере
 CSRF_COOKIE_SECURE = True
