@@ -4,3 +4,10 @@ djangocms-frontend
 django-filer
 djangocms-text-ckeditor
 django-fsm<3
+
+djangocms-file
+djangocms-picture
+djangocms-video
+djangocms-googlemap
+djangocms-snippet
+djangocms-style
