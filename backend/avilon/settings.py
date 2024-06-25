@@ -84,6 +84,14 @@ INSTALLED_APPS = [
     'djangocms_frontend.contrib.navigation',
     'djangocms_frontend.contrib.tabs',
     'djangocms_frontend.contrib.utilities',
+
+    # Доп. плагины для django CMS
+    'djangocms_file',
+    'djangocms_picture',
+    'djangocms_video',
+    'djangocms_googlemap',
+    'djangocms_snippet',
+    'djangocms_style',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +132,8 @@ TEMPLATES = [
         },
     },
 ]
+
+THUMBNAIL_HIGH_RESOLUTION = True
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
@@ -180,14 +190,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru-RU'
 
 LANGUAGES = [
     ("en", _("English")),
-    # Add additional languages here
+    ("ru", _("Russian")),
 ]
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 USE_L10N = True

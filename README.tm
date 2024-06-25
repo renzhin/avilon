@@ -23,3 +23,16 @@ winpty python manage.py createsuperuser
 
 7. Запускаем отладочный сервер 127.0.0.1
 python manage.py runserver
+
+
+-------------------------
+pip install djangocms-file djangocms-picture djangocms-video djangocms-googlemap djangocms-snippet djangocms-style
+
+    'djangocms_file',
+    'djangocms_picture',
+    'djangocms_video',
+    'djangocms_googlemap',
+    'djangocms_snippet',
+    'djangocms_style',
+
+python manage.py migrate
