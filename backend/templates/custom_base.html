@@ -1,0 +1,30 @@
+{# templates/custom_base.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Site{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block extra_head %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    <header>
+        <h1>My Custom Header</h1>
+    </header>
+    {% endblock %}
+
+    {% block content %}
+    <!-- Content will go here -->
+    {% endblock %}
+
+    {% block footer %}
+    <footer>
+        <p>My Custom Footer</p>
+    </footer>
+    {% endblock %}
+</body>
+</html>

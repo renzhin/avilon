@@ -231,7 +231,7 @@ SITE_ID = 1
 
 CMS_TEMPLATES = (
     ("base.html", _("Standard")),
-    # ('home.html', _('Home page template')),
+    ('home.html', _('Home page template')),
 )
 
 # Enable permissions
